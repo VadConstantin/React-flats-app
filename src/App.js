@@ -7,6 +7,8 @@ import { Button } from './components/button'
 const green = '#39D1B4';
 const yellow = '#FFD712';
 
+console.log("hello")
+
 export class App extends React.Component {
   constructor(props) {
     super(props);
@@ -28,6 +30,8 @@ export class App extends React.Component {
         });
       })
   }
+
+
 
   changeColor() {
     const newColor = this.state.color == green ? yellow : green
