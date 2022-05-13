@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import { Flat } from './components/flat'
+import Flat from './components/flat'
 import { Button } from './components/button'
 
 const dark = 'rgb(35, 32, 44)';
@@ -35,13 +35,14 @@ export class App extends React.Component {
 
   changeColor() {
     const newColor = this.state.color === white ? dark : white
-    this.setState({color: newColor})
     const newFontColor = this.state.fontColor === dark ? white : dark
-    this.setState({fontColor: newFontColor})
+    this.setState({
+      color: newColor,
+      fontColor: newFontColor
+    })
   }
 
   render() {
-
     return (
       <div className="app">
         <div className="main" style={{background: this.state.color}}>
