@@ -46,7 +46,7 @@ export class App extends React.Component {
     return (
       <div className="app">
         <div className="main" style={{background: this.state.color}}>
-          <Button text="dark mode" onClick={this.changeColor} />
+          <Button text="dark mode" IClick={this.changeColor} />
           <div className="search">
           </div>
           <div className="flats">

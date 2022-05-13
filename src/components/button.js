@@ -4,7 +4,7 @@ export class Button extends React.Component {
 
   render() {
     return (
-      <button className="home-button" onClick={this.props.onClick}> {this.props.text}</button>
+      <button className="home-button" onClick={this.props.IClick}> {this.props.text}</button>
     )
   }
 };
