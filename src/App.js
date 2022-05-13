@@ -4,8 +4,9 @@ import './App.css';
 import { Flat } from './components/flat'
 import { Button } from './components/button'
 
-const green = '#39D1B4';
-const yellow = '#FFD712';
+const dark = 'rgb(35, 32, 44)';
+const white = 'rgb(255, 255, 255)';
+const green = 'rgb(0, 175, 55)'
 
 console.log("hello")
 
@@ -14,7 +15,8 @@ export class App extends React.Component {
     super(props);
     this.state = {
       flats: [],
-      color: green
+      color: white,
+      fontColor: dark
     };
     this.changeColor = this.changeColor.bind(this)
   }
@@ -31,23 +33,24 @@ export class App extends React.Component {
       })
   }
 
-
-
   changeColor() {
-    const newColor = this.state.color == green ? yellow : green
+    const newColor = this.state.color === white ? dark : white
     this.setState({color: newColor})
+    const newFontColor = this.state.fontColor === dark ? white : dark
+    this.setState({fontColor: newFontColor})
   }
 
   render() {
+
     return (
       <div className="app">
         <div className="main" style={{background: this.state.color}}>
-          <Button text="change color" onClick={this.changeColor} />
+          <Button text="dark mode" onClick={this.changeColor} />
           <div className="search">
           </div>
           <div className="flats">
             {this.state.flats.map((flat) => {
-              return <Flat fl={flat} />
+              return <Flat fl={flat} fontColor={this.state.fontColor}/>
             })}
           </div>
         </div>
