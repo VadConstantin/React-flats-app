@@ -16,7 +16,8 @@ export class App extends React.Component {
     this.state = {
       flats: [],
       color: white,
-      fontColor: dark
+      fontColor: dark,
+      buttonText: "Dark Mode"
     };
     this.changeColor = this.changeColor.bind(this)
   }
@@ -36,9 +37,11 @@ export class App extends React.Component {
   changeColor() {
     const newColor = this.state.color === white ? dark : white
     const newFontColor = this.state.fontColor === dark ? white : dark
+    const newButtonText = this.state.buttonText === "Dark Mode" ? "Light Mode" : "Dark Mode"
     this.setState({
       color: newColor,
-      fontColor: newFontColor
+      fontColor: newFontColor,
+      buttonText: newButtonText
     })
   }
 
@@ -46,7 +49,7 @@ export class App extends React.Component {
     return (
       <div className="app">
         <div className="main" style={{background: this.state.color}}>
-          <Button text="dark mode" IClick={this.changeColor} />
+          <Button text={this.state.buttonText} IClick={this.changeColor} />
           <div className="search">
           </div>
           <div className="flats">

@@ -1,0 +1,12 @@
+.home-button {
+  width: 150px;
+  height: 40px;
+  font-size: 15px;
+  align-items: center ;
+  margin: 20px 0 10px 10px;
+}
+
+.home-button:hover {
+  cursor: pointer;
+
+}
