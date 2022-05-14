@@ -1,12 +1,12 @@
-// import logo from './logo.svg';
+
 import React from 'react';
 import './App.css';
 import Flat from './components/flat'
 import { Button } from './components/button'
+import  { Clock } from './components/clock'
 
 const dark = 'rgb(35, 32, 44)';
 const white = 'rgb(255, 255, 255)';
-const green = 'rgb(0, 175, 55)'
 
 console.log("hello")
 
@@ -49,6 +49,7 @@ export class App extends React.Component {
     return (
       <div className="app">
         <div className="main" style={{background: this.state.color}}>
+          <Clock />
           <Button text={this.state.buttonText} IClick={this.changeColor} />
           <div className="search">
           </div>
