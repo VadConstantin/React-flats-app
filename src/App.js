@@ -1,9 +1,10 @@
 
 import React from 'react';
 import './App.css';
-import Flat from './components/flat'
+import { Flat } from './components/flat'
 import { Button } from './components/button'
 import  { Clock } from './components/clock'
+import Counter from './components/counter'
 
 const dark = 'rgb(35, 32, 44)';
 const white = 'rgb(255, 255, 255)';
@@ -50,12 +51,13 @@ export class App extends React.Component {
       <div className="app">
         <div className="main" style={{background: this.state.color}}>
           <Clock />
-          <Button text={this.state.buttonText} IClick={this.changeColor} />
+          <Counter />
+          <Button text={this.state.buttonText} IClick={this.changeColor}/>
           <div className="search">
           </div>
           <div className="flats">
             {this.state.flats.map((flat) => {
-              return <Flat fl={flat} fontColor={this.state.fontColor}/>
+              return <Flat flat={flat} fontColor={this.state.fontColor}/>
             })}
           </div>
         </div>

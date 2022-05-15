@@ -1,10 +1,10 @@
 import React from 'react';
 import './flat.css'
 
-const Flat = props => {
-  const { fl, fontColor } = props;
-  const style = { backgroundImage: `url('${fl.imageUrl}')` }
-  const title = fl.name + " - " + fl.price + "€"
+export const Flat = props => {
+  const { flat, fontColor } = props;
+  const style = { backgroundImage: `url('${flat.imageUrl}')` }
+  const title = flat.name + " - " + flat.price + "€"
 
   return (
   <div className="flat">
@@ -15,4 +15,3 @@ const Flat = props => {
   </div>
 )
 }
-export default Flat ;
