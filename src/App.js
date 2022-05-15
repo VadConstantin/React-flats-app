@@ -5,6 +5,7 @@ import { Flat } from './components/flat'
 import { Button } from './components/button'
 import  { Clock } from './components/clock'
 import Counter from './components/counter'
+import Clockbis from './components/clockbis'
 
 const dark = 'rgb(35, 32, 44)';
 const white = 'rgb(255, 255, 255)';
@@ -51,6 +52,7 @@ export class App extends React.Component {
       <div className="app">
         <div className="main" style={{background: this.state.color}}>
           <Clock />
+          < Clockbis />
           <Counter />
           <Button text={this.state.buttonText} IClick={this.changeColor}/>
           <div className="search">
