@@ -7,6 +7,7 @@ import  { Clock } from './components/clock'
 import Counter from './components/counter'
 import Questions from './components/questions'
 import Pizza from './components/pizza'
+import GroceryCart from './components/groceryCart'
 
 
 const dark = 'rgb(35, 32, 44)';
@@ -67,6 +68,7 @@ export class App extends React.Component {
         <div className="carte">
           <Questions />
           <Pizza />
+          <GroceryCart />
 
         </div>
       </div>
