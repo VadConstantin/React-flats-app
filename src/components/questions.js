@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './questions.css';
 
 const Questions = () => {
 
@@ -52,10 +53,10 @@ const Questions = () => {
     <nav>
       <span>Question #{questionIndex + 1}</span>
       <div>
-        <button disabled={onFirstQuestion} onClick={goBack}>
+        <button disabled={onFirstQuestion} onClick={goBack} className="question-button-back">
           Go Back
         </button>
-        <button disabled={onLastQuestion} onClick={goToNext}>
+        <button disabled={onLastQuestion} onClick={goToNext} className="question-button-next">
           Next Question
         </button>
         <div>{questions[questionIndex].prompt}</div>
