@@ -6,9 +6,9 @@ const Counter = () => {
   const increment = () => {
     setCount(previCount => previCount + 1)
   }
-  const decrement = () => {
+  const decrement = () =>
     setCount(prevCount => prevCount - 1)
-  }
+
 
   return (
     <div>
