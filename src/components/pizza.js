@@ -18,7 +18,7 @@ const Pizza = () => {
 
   return (
     <div>
-      <h1>PIZZA TIME !! </h1>
+      <h1>PIZZA TIME ! </h1>
       <p>Add your toppings</p>
 
       {options.map(option => {

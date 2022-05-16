@@ -7,7 +7,7 @@ import  { Clock } from './components/clock'
 import Counter from './components/counter'
 import Questions from './components/questions'
 import Pizza from './components/pizza'
-import GroceryCart from './components/groceryCart'
+import MyCart from './components/MyCart'
 
 
 const dark = 'rgb(35, 32, 44)';
@@ -64,11 +64,16 @@ export class App extends React.Component {
               return <Flat flat={flat} fontColor={this.state.fontColor}/>
             })}
           </div>
+          <div className='main' style={{background: this.state.color}}>
+            <div style={{color: this.state.fontColor}}>
+              Hello
+            </div>
+          </div>
         </div>
         <div className="carte">
           <Questions />
           <Pizza />
-          <GroceryCart />
+          < MyCart />
 
         </div>
       </div>
