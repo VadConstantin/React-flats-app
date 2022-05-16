@@ -18,6 +18,13 @@ const MyCart = () => {
     }
   }
 
+  const removeItem = (event) => {
+    const selectedItem = event.target.value
+    setCart((prev) => {
+      return prev.filter(t => t !== selectedItem)
+    })
+  }
+
   return (
     <div>
       <h1>
@@ -33,7 +40,7 @@ const MyCart = () => {
       <p>my cart</p>
       <ul>
         {cart.map(item => {
-          return <li>{item}</li>
+          return <button value={item} onClick={removeItem}>{item}</button>
         })}
       </ul>
 
